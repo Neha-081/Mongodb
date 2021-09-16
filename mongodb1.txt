@@ -1,0 +1,111 @@
+Microsoft Windows [Version 10.0.19043.1165]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\nehap>mongo
+MongoDB shell version v5.0.2
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("300dc991-c2cc-4a58-8bf3-5ed720827ebe") }
+MongoDB server version: 5.0.2
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2021-09-17T01:25:14.401+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> use assignmentss
+switched to db assignmentss
+> db.createCollection("users")
+{ "ok" : 1 }
+> db.users.insert({first_name:"neha",last_name:"prajapati",email:"nehaprajapati1150@gmail.com",gender:"female",ip_address:"123456789",age:"21"})
+WriteResult({ "nInserted" : 1 })
+> db.users.insertMany([{fruit1:"apple"},{fruit2:"mango"},{fruit3:"orange"},{fruit4:"grapes"},{fruit5:"guava"},{fruit6:"banana"},{fruit7:"papaya"},{fruit8:"lichi"},{fruit9:"watermelon"},{fruit10:"muskmelon"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("6143c9d574f13b8849fb23d7"),
+                ObjectId("6143c9d574f13b8849fb23d8"),
+                ObjectId("6143c9d574f13b8849fb23d9"),
+                ObjectId("6143c9d574f13b8849fb23da"),
+                ObjectId("6143c9d574f13b8849fb23db"),
+                ObjectId("6143c9d574f13b8849fb23dc"),
+                ObjectId("6143c9d574f13b8849fb23dd"),
+                ObjectId("6143c9d574f13b8849fb23de"),
+                ObjectId("6143c9d574f13b8849fb23df"),
+                ObjectId("6143c9d574f13b8849fb23e0")
+        ]
+}
+> db.users.find()
+{ "_id" : ObjectId("6143c9b574f13b8849fb23d6"), "first_name" : "neha", "last_name" : "prajapati", "email" : "nehaprajapati1150@gmail.com", "gender" : "female", "ip_address" : "123456789", "age" : "21" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23d7"), "fruit1" : "apple" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23d8"), "fruit2" : "mango" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23d9"), "fruit3" : "orange" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23da"), "fruit4" : "grapes" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23db"), "fruit5" : "guava" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23dc"), "fruit6" : "banana" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23dd"), "fruit7" : "papaya" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23de"), "fruit8" : "lichi" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23df"), "fruit9" : "watermelon" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23e0"), "fruit10" : "muskmelon" }
+>
+> db.users.findOne({fruit2:"mango"})
+{ "_id" : ObjectId("6143c9d574f13b8849fb23d8"), "fruit2" : "mango" }
+> db.users.update({"_id" : ObjectId("6143c5b309829a1e7f435b3a")},{$set:{fruit1:"lemon"}})
+WriteResult({ "nMatched" : 0, "nUpserted" : 0, "nModified" : 0 })
+> db.users.update({"_id" : ObjectId("6143c9d574f13b8849fb23d7")},{$set:{fruit1:"lemon"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.users.find({"_id" : ObjectId("6143c9d574f13b8849fb23d7")})
+{ "_id" : ObjectId("6143c9d574f13b8849fb23d7"), "fruit1" : "lemon" }
+>
+> db.users.updateMany({fruit5:"guava"},{$set:{fruit5:"strwaberry"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.users.find()
+{ "_id" : ObjectId("6143c9b574f13b8849fb23d6"), "first_name" : "neha", "last_name" : "prajapati", "email" : "nehaprajapati1150@gmail.com", "gender" : "female", "ip_address" : "123456789", "age" : "21" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23d7"), "fruit1" : "lemon" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23d8"), "fruit2" : "mango" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23d9"), "fruit3" : "orange" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23da"), "fruit4" : "grapes" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23db"), "fruit5" : "strwaberry" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23dc"), "fruit6" : "banana" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23dd"), "fruit7" : "papaya" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23de"), "fruit8" : "lichi" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23df"), "fruit9" : "watermelon" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23e0"), "fruit10" : "muskmelon" }
+>
+> db.users.remove({fruit6:"banana"})
+WriteResult({ "nRemoved" : 1 })
+> db.users.find()
+{ "_id" : ObjectId("6143c9b574f13b8849fb23d6"), "first_name" : "neha", "last_name" : "prajapati", "email" : "nehaprajapati1150@gmail.com", "gender" : "female", "ip_address" : "123456789", "age" : "21" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23d7"), "fruit1" : "lemon" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23d8"), "fruit2" : "mango" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23d9"), "fruit3" : "orange" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23da"), "fruit4" : "grapes" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23db"), "fruit5" : "strwaberry" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23dd"), "fruit7" : "papaya" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23de"), "fruit8" : "lichi" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23df"), "fruit9" : "watermelon" }
+{ "_id" : ObjectId("6143c9d574f13b8849fb23e0"), "fruit10" : "muskmelon" }
+> db.users.removeMany({fruit1:"lemon",fruit2:"mango"})
+uncaught exception: TypeError: db.users.removeMany is not a function :
+@(shell):1:1
+> db.dropDatabase()
+{ "ok" : 1 }
+> db.users.find()
+>
+>

@@ -1,0 +1,1303 @@
+Microsoft Windows [Version 10.0.19043.1165]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\nehap>mongo
+MongoDB shell version v5.0.2
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("304a21d0-fe33-4b3c-a7a8-e1d23b594ccd") }
+MongoDB server version: 5.0.2
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2021-09-17T01:25:14.401+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show databases
+admin        0.000GB
+assignments  0.000GB
+config       0.000GB
+local        0.000GB
+movies       0.000GB
+test         0.000GB
+test2        0.000GB
+> use movies
+switched to db movies
+> db.movies.find().pretty()
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c963"),
+        "id" : 1,
+        "movie_name" : "Medicine for Melancholy",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1995,
+        "budget" : "$11903.24"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c964"),
+        "id" : 2,
+        "movie_name" : "Kitty",
+        "movie_genre" : "Drama",
+        "production_year" : 2017,
+        "budget" : "$9159.82"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c965"),
+        "id" : 3,
+        "movie_name" : "Arrangement, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1992,
+        "budget" : "$19946.20"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c966"),
+        "id" : 4,
+        "movie_name" : "Gun the Man Down",
+        "movie_genre" : "Western",
+        "production_year" : 2007,
+        "budget" : "$18572.57"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c967"),
+        "id" : 5,
+        "movie_name" : "Answer Man, The (a.k.a. Arlen Faber)",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1997,
+        "budget" : "$19567.19"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c968"),
+        "id" : 6,
+        "movie_name" : "Knocked Up",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1998,
+        "budget" : "$15532.78"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c969"),
+        "id" : 7,
+        "movie_name" : "Yards, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1994,
+        "budget" : "$9433.45"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96a"),
+        "id" : 8,
+        "movie_name" : "Emergency Escape, The (Wyjscie awaryjne)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2008,
+        "budget" : "$11717.56"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96b"),
+        "id" : 9,
+        "movie_name" : "World's Greatest Dad",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2018,
+        "budget" : "$18629.27"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96c"),
+        "id" : 10,
+        "movie_name" : "Abbott and Costello Meet Dr. Jekyll and Mr. Hyde",
+        "movie_genre" : "Comedy|Horror|Sci-Fi",
+        "production_year" : 1993,
+        "budget" : "$9866.76"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96d"),
+        "id" : 11,
+        "movie_name" : "Just Imagine",
+        "movie_genre" : "Musical|Sci-Fi",
+        "production_year" : 2020,
+        "budget" : "$9219.89"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96e"),
+        "id" : 12,
+        "movie_name" : "Departed, The",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 1994,
+        "budget" : "$12429.62"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96f"),
+        "id" : 13,
+        "movie_name" : "Down and Out in Beverly Hills",
+        "movie_genre" : "Comedy",
+        "production_year" : 1992,
+        "budget" : "$18048.58"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c970"),
+        "id" : 14,
+        "movie_name" : "Every Which Way But Loose",
+        "movie_genre" : "Comedy",
+        "production_year" : 1998,
+        "budget" : "$16415.04"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c971"),
+        "id" : 15,
+        "movie_name" : "Gazebo, The",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2014,
+        "budget" : "$18873.45"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c972"),
+        "id" : 16,
+        "movie_name" : "ATF ",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2003,
+        "budget" : "$17702.02"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c973"),
+        "id" : 17,
+        "movie_name" : "Jesse Stone: Night Passage",
+        "movie_genre" : "Crime|Drama|Mystery",
+        "production_year" : 2007,
+        "budget" : "$11397.43"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c974"),
+        "id" : 18,
+        "movie_name" : "Married Couple, A",
+        "movie_genre" : "Documentary",
+        "production_year" : 1990,
+        "budget" : "$19147.01"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c975"),
+        "id" : 19,
+        "movie_name" : "Stay as You Are",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1993,
+        "budget" : "$13764.02"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c976"),
+        "id" : 20,
+        "movie_name" : "Bells, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1997,
+        "budget" : "$9407.02"
+}
+Type "it" for more
+> db.movies.find({movie_name:{$eq:"Stay as You Are"}}).pretty()
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c975"),
+        "id" : 19,
+        "movie_name" : "Stay as You Are",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1993,
+        "budget" : "$13764.02"
+}
+>  db.movies.find({movie_name:{$ne:"ATF"}}).pretty()
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c963"),
+        "id" : 1,
+        "movie_name" : "Medicine for Melancholy",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1995,
+        "budget" : "$11903.24"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c964"),
+        "id" : 2,
+        "movie_name" : "Kitty",
+        "movie_genre" : "Drama",
+        "production_year" : 2017,
+        "budget" : "$9159.82"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c965"),
+        "id" : 3,
+        "movie_name" : "Arrangement, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1992,
+        "budget" : "$19946.20"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c966"),
+        "id" : 4,
+        "movie_name" : "Gun the Man Down",
+        "movie_genre" : "Western",
+        "production_year" : 2007,
+        "budget" : "$18572.57"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c967"),
+        "id" : 5,
+        "movie_name" : "Answer Man, The (a.k.a. Arlen Faber)",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1997,
+        "budget" : "$19567.19"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c968"),
+        "id" : 6,
+        "movie_name" : "Knocked Up",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1998,
+        "budget" : "$15532.78"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c969"),
+        "id" : 7,
+        "movie_name" : "Yards, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1994,
+        "budget" : "$9433.45"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96a"),
+        "id" : 8,
+        "movie_name" : "Emergency Escape, The (Wyjscie awaryjne)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2008,
+        "budget" : "$11717.56"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96b"),
+        "id" : 9,
+        "movie_name" : "World's Greatest Dad",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2018,
+        "budget" : "$18629.27"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96c"),
+        "id" : 10,
+        "movie_name" : "Abbott and Costello Meet Dr. Jekyll and Mr. Hyde",
+        "movie_genre" : "Comedy|Horror|Sci-Fi",
+        "production_year" : 1993,
+        "budget" : "$9866.76"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96d"),
+        "id" : 11,
+        "movie_name" : "Just Imagine",
+        "movie_genre" : "Musical|Sci-Fi",
+        "production_year" : 2020,
+        "budget" : "$9219.89"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96e"),
+        "id" : 12,
+        "movie_name" : "Departed, The",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 1994,
+        "budget" : "$12429.62"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96f"),
+        "id" : 13,
+        "movie_name" : "Down and Out in Beverly Hills",
+        "movie_genre" : "Comedy",
+        "production_year" : 1992,
+        "budget" : "$18048.58"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c970"),
+        "id" : 14,
+        "movie_name" : "Every Which Way But Loose",
+        "movie_genre" : "Comedy",
+        "production_year" : 1998,
+        "budget" : "$16415.04"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c971"),
+        "id" : 15,
+        "movie_name" : "Gazebo, The",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2014,
+        "budget" : "$18873.45"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c972"),
+        "id" : 16,
+        "movie_name" : "ATF ",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2003,
+        "budget" : "$17702.02"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c973"),
+        "id" : 17,
+        "movie_name" : "Jesse Stone: Night Passage",
+        "movie_genre" : "Crime|Drama|Mystery",
+        "production_year" : 2007,
+        "budget" : "$11397.43"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c974"),
+        "id" : 18,
+        "movie_name" : "Married Couple, A",
+        "movie_genre" : "Documentary",
+        "production_year" : 1990,
+        "budget" : "$19147.01"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c975"),
+        "id" : 19,
+        "movie_name" : "Stay as You Are",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1993,
+        "budget" : "$13764.02"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c976"),
+        "id" : 20,
+        "movie_name" : "Bells, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1997,
+        "budget" : "$9407.02"
+}
+Type "it" for more
+> db.movies.find({$and:[{budget:{$gt:"$10000"}},{budget:{$gte:"$15000"}}]}).pretty()
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c964"),
+        "id" : 2,
+        "movie_name" : "Kitty",
+        "movie_genre" : "Drama",
+        "production_year" : 2017,
+        "budget" : "$9159.82"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c965"),
+        "id" : 3,
+        "movie_name" : "Arrangement, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1992,
+        "budget" : "$19946.20"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c966"),
+        "id" : 4,
+        "movie_name" : "Gun the Man Down",
+        "movie_genre" : "Western",
+        "production_year" : 2007,
+        "budget" : "$18572.57"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c967"),
+        "id" : 5,
+        "movie_name" : "Answer Man, The (a.k.a. Arlen Faber)",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1997,
+        "budget" : "$19567.19"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c968"),
+        "id" : 6,
+        "movie_name" : "Knocked Up",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1998,
+        "budget" : "$15532.78"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c969"),
+        "id" : 7,
+        "movie_name" : "Yards, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1994,
+        "budget" : "$9433.45"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96b"),
+        "id" : 9,
+        "movie_name" : "World's Greatest Dad",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2018,
+        "budget" : "$18629.27"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96c"),
+        "id" : 10,
+        "movie_name" : "Abbott and Costello Meet Dr. Jekyll and Mr. Hyde",
+        "movie_genre" : "Comedy|Horror|Sci-Fi",
+        "production_year" : 1993,
+        "budget" : "$9866.76"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96d"),
+        "id" : 11,
+        "movie_name" : "Just Imagine",
+        "movie_genre" : "Musical|Sci-Fi",
+        "production_year" : 2020,
+        "budget" : "$9219.89"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96f"),
+        "id" : 13,
+        "movie_name" : "Down and Out in Beverly Hills",
+        "movie_genre" : "Comedy",
+        "production_year" : 1992,
+        "budget" : "$18048.58"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c970"),
+        "id" : 14,
+        "movie_name" : "Every Which Way But Loose",
+        "movie_genre" : "Comedy",
+        "production_year" : 1998,
+        "budget" : "$16415.04"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c971"),
+        "id" : 15,
+        "movie_name" : "Gazebo, The",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2014,
+        "budget" : "$18873.45"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c972"),
+        "id" : 16,
+        "movie_name" : "ATF ",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2003,
+        "budget" : "$17702.02"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c974"),
+        "id" : 18,
+        "movie_name" : "Married Couple, A",
+        "movie_genre" : "Documentary",
+        "production_year" : 1990,
+        "budget" : "$19147.01"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c976"),
+        "id" : 20,
+        "movie_name" : "Bells, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1997,
+        "budget" : "$9407.02"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c97b"),
+        "id" : 25,
+        "movie_name" : "Mackenna's Gold",
+        "movie_genre" : "Western",
+        "production_year" : 2015,
+        "budget" : "$18221.96"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c97c"),
+        "id" : 26,
+        "movie_name" : "Sidewalls (Medianeras)",
+        "movie_genre" : "Drama",
+        "production_year" : 2005,
+        "budget" : "$16258.62"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c97e"),
+        "id" : 28,
+        "movie_name" : "Brute Force",
+        "movie_genre" : "Drama|Film-Noir|Thriller",
+        "production_year" : 2009,
+        "budget" : "$19528.98"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c97f"),
+        "id" : 29,
+        "movie_name" : "Sissi: The Young Empress (Sissi - Die Junge Kaiserin)",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : "$15861.70"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c981"),
+        "id" : 31,
+        "movie_name" : "A Matter of Size",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1999,
+        "budget" : "$18840.32"
+}
+Type "it" for more
+ db.movies.find({$and:[{budget:{$lt:"$20000"}},{budget:{$lte:"$188221.96"}}]}).pretty()
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c963"),
+        "id" : 1,
+        "movie_name" : "Medicine for Melancholy",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1995,
+        "budget" : "$11903.24"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c966"),
+        "id" : 4,
+        "movie_name" : "Gun the Man Down",
+        "movie_genre" : "Western",
+        "production_year" : 2007,
+        "budget" : "$18572.57"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c968"),
+        "id" : 6,
+        "movie_name" : "Knocked Up",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1998,
+        "budget" : "$15532.78"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96a"),
+        "id" : 8,
+        "movie_name" : "Emergency Escape, The (Wyjscie awaryjne)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2008,
+        "budget" : "$11717.56"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96b"),
+        "id" : 9,
+        "movie_name" : "World's Greatest Dad",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2018,
+        "budget" : "$18629.27"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96e"),
+        "id" : 12,
+        "movie_name" : "Departed, The",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 1994,
+        "budget" : "$12429.62"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96f"),
+        "id" : 13,
+        "movie_name" : "Down and Out in Beverly Hills",
+        "movie_genre" : "Comedy",
+        "production_year" : 1992,
+        "budget" : "$18048.58"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c970"),
+        "id" : 14,
+        "movie_name" : "Every Which Way But Loose",
+        "movie_genre" : "Comedy",
+        "production_year" : 1998,
+        "budget" : "$16415.04"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c972"),
+        "id" : 16,
+        "movie_name" : "ATF ",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2003,
+        "budget" : "$17702.02"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c973"),
+        "id" : 17,
+        "movie_name" : "Jesse Stone: Night Passage",
+        "movie_genre" : "Crime|Drama|Mystery",
+        "production_year" : 2007,
+        "budget" : "$11397.43"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c975"),
+        "id" : 19,
+        "movie_name" : "Stay as You Are",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1993,
+        "budget" : "$13764.02"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c977"),
+        "id" : 21,
+        "movie_name" : "Last Ferry, The (Ostatni prom)",
+        "movie_genre" : "Drama",
+        "production_year" : 1995,
+        "budget" : "$13685.10"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c978"),
+        "id" : 22,
+        "movie_name" : "Amazing Spider-Man, The",
+        "movie_genre" : "Action|Adventure|Sci-Fi|IMAX",
+        "production_year" : 1990,
+        "budget" : "$10062.59"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c979"),
+        "id" : 23,
+        "movie_name" : "Sexmission (Seksmisja)",
+        "movie_genre" : "Adventure|Comedy|Sci-Fi",
+        "production_year" : 1998,
+        "budget" : "$14883.24"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c97a"),
+        "id" : 24,
+        "movie_name" : "Captain America: The First Avenger",
+        "movie_genre" : "Action|Adventure|Sci-Fi|Thriller|War",
+        "production_year" : 2011,
+        "budget" : "$14470.75"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c97b"),
+        "id" : 25,
+        "movie_name" : "Mackenna's Gold",
+        "movie_genre" : "Western",
+        "production_year" : 2015,
+        "budget" : "$18221.96"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c97c"),
+        "id" : 26,
+        "movie_name" : "Sidewalls (Medianeras)",
+        "movie_genre" : "Drama",
+        "production_year" : 2005,
+        "budget" : "$16258.62"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c97d"),
+        "id" : 27,
+        "movie_name" : "The Sword and the Rose",
+        "movie_genre" : "Adventure|Children|Drama",
+        "production_year" : 2008,
+        "budget" : "$14335.79"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c97f"),
+        "id" : 29,
+        "movie_name" : "Sissi: The Young Empress (Sissi - Die Junge Kaiserin)",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : "$15861.70"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c980"),
+        "id" : 30,
+        "movie_name" : "Up",
+        "movie_genre" : "Adventure|Animation|Children|Drama",
+        "production_year" : 2011,
+        "budget" : "$14547.19"
+}
+Type "it" for more
+ db.movies.find({$and:[{budget:{$gt:"$10000"}},{production_year:{$gt:2000}}]}).pretty()
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c964"),
+        "id" : 2,
+        "movie_name" : "Kitty",
+        "movie_genre" : "Drama",
+        "production_year" : 2017,
+        "budget" : "$9159.82"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c966"),
+        "id" : 4,
+        "movie_name" : "Gun the Man Down",
+        "movie_genre" : "Western",
+        "production_year" : 2007,
+        "budget" : "$18572.57"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96a"),
+        "id" : 8,
+        "movie_name" : "Emergency Escape, The (Wyjscie awaryjne)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2008,
+        "budget" : "$11717.56"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96b"),
+        "id" : 9,
+        "movie_name" : "World's Greatest Dad",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2018,
+        "budget" : "$18629.27"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96d"),
+        "id" : 11,
+        "movie_name" : "Just Imagine",
+        "movie_genre" : "Musical|Sci-Fi",
+        "production_year" : 2020,
+        "budget" : "$9219.89"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c971"),
+        "id" : 15,
+        "movie_name" : "Gazebo, The",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2014,
+        "budget" : "$18873.45"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c972"),
+        "id" : 16,
+        "movie_name" : "ATF ",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2003,
+        "budget" : "$17702.02"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c973"),
+        "id" : 17,
+        "movie_name" : "Jesse Stone: Night Passage",
+        "movie_genre" : "Crime|Drama|Mystery",
+        "production_year" : 2007,
+        "budget" : "$11397.43"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c97a"),
+        "id" : 24,
+        "movie_name" : "Captain America: The First Avenger",
+        "movie_genre" : "Action|Adventure|Sci-Fi|Thriller|War",
+        "production_year" : 2011,
+        "budget" : "$14470.75"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c97b"),
+        "id" : 25,
+        "movie_name" : "Mackenna's Gold",
+        "movie_genre" : "Western",
+        "production_year" : 2015,
+        "budget" : "$18221.96"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c97c"),
+        "id" : 26,
+        "movie_name" : "Sidewalls (Medianeras)",
+        "movie_genre" : "Drama",
+        "production_year" : 2005,
+        "budget" : "$16258.62"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c97d"),
+        "id" : 27,
+        "movie_name" : "The Sword and the Rose",
+        "movie_genre" : "Adventure|Children|Drama",
+        "production_year" : 2008,
+        "budget" : "$14335.79"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c97e"),
+        "id" : 28,
+        "movie_name" : "Brute Force",
+        "movie_genre" : "Drama|Film-Noir|Thriller",
+        "production_year" : 2009,
+        "budget" : "$19528.98"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c97f"),
+        "id" : 29,
+        "movie_name" : "Sissi: The Young Empress (Sissi - Die Junge Kaiserin)",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : "$15861.70"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c980"),
+        "id" : 30,
+        "movie_name" : "Up",
+        "movie_genre" : "Adventure|Animation|Children|Drama",
+        "production_year" : 2011,
+        "budget" : "$14547.19"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c982"),
+        "id" : 32,
+        "movie_name" : "Star Trek",
+        "movie_genre" : "Action|Adventure|Sci-Fi|IMAX",
+        "production_year" : 2014,
+        "budget" : "$12702.84"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c983"),
+        "id" : 33,
+        "movie_name" : "My Friend Irma Goes West",
+        "movie_genre" : "Comedy|Crime|Musical",
+        "production_year" : 2008,
+        "budget" : "$11781.71"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c984"),
+        "id" : 34,
+        "movie_name" : "Cross My Heart",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2014,
+        "budget" : "$9600.12"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c985"),
+        "id" : 35,
+        "movie_name" : "In Gold We Trust (600 kilos d'or pur)",
+        "movie_genre" : "Adventure",
+        "production_year" : 2014,
+        "budget" : "$17372.42"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c98a"),
+        "id" : 40,
+        "movie_name" : "Milky Way, The (Voie lactée, La)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2019,
+        "budget" : "$13791.77"
+}
+Type "it" for more
+>> db.movies.find({$or:[{budget:{$gt:"$10000"}},{production_year:{$gt:2000}}]}).pretty()
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c963"),
+        "id" : 1,
+        "movie_name" : "Medicine for Melancholy",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1995,
+        "budget" : "$11903.24"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c964"),
+        "id" : 2,
+        "movie_name" : "Kitty",
+        "movie_genre" : "Drama",
+        "production_year" : 2017,
+        "budget" : "$9159.82"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c965"),
+        "id" : 3,
+        "movie_name" : "Arrangement, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1992,
+        "budget" : "$19946.20"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c966"),
+        "id" : 4,
+        "movie_name" : "Gun the Man Down",
+        "movie_genre" : "Western",
+        "production_year" : 2007,
+        "budget" : "$18572.57"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c967"),
+        "id" : 5,
+        "movie_name" : "Answer Man, The (a.k.a. Arlen Faber)",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1997,
+        "budget" : "$19567.19"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c968"),
+        "id" : 6,
+        "movie_name" : "Knocked Up",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1998,
+        "budget" : "$15532.78"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c969"),
+        "id" : 7,
+        "movie_name" : "Yards, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1994,
+        "budget" : "$9433.45"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96a"),
+        "id" : 8,
+        "movie_name" : "Emergency Escape, The (Wyjscie awaryjne)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2008,
+        "budget" : "$11717.56"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96b"),
+        "id" : 9,
+        "movie_name" : "World's Greatest Dad",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2018,
+        "budget" : "$18629.27"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96c"),
+        "id" : 10,
+        "movie_name" : "Abbott and Costello Meet Dr. Jekyll and Mr. Hyde",
+        "movie_genre" : "Comedy|Horror|Sci-Fi",
+        "production_year" : 1993,
+        "budget" : "$9866.76"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96d"),
+        "id" : 11,
+        "movie_name" : "Just Imagine",
+        "movie_genre" : "Musical|Sci-Fi",
+        "production_year" : 2020,
+        "budget" : "$9219.89"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96e"),
+        "id" : 12,
+        "movie_name" : "Departed, The",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 1994,
+        "budget" : "$12429.62"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96f"),
+        "id" : 13,
+        "movie_name" : "Down and Out in Beverly Hills",
+        "movie_genre" : "Comedy",
+        "production_year" : 1992,
+        "budget" : "$18048.58"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c970"),
+        "id" : 14,
+        "movie_name" : "Every Which Way But Loose",
+        "movie_genre" : "Comedy",
+        "production_year" : 1998,
+        "budget" : "$16415.04"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c971"),
+        "id" : 15,
+        "movie_name" : "Gazebo, The",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2014,
+        "budget" : "$18873.45"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c972"),
+        "id" : 16,
+        "movie_name" : "ATF ",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2003,
+        "budget" : "$17702.02"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c973"),
+        "id" : 17,
+        "movie_name" : "Jesse Stone: Night Passage",
+        "movie_genre" : "Crime|Drama|Mystery",
+        "production_year" : 2007,
+        "budget" : "$11397.43"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c974"),
+        "id" : 18,
+        "movie_name" : "Married Couple, A",
+        "movie_genre" : "Documentary",
+        "production_year" : 1990,
+        "budget" : "$19147.01"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c975"),
+        "id" : 19,
+        "movie_name" : "Stay as You Are",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1993,
+        "budget" : "$13764.02"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c976"),
+        "id" : 20,
+        "movie_name" : "Bells, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1997,
+        "budget" : "$9407.02"
+}
+Type "it" for more
+> db.movies.find({$and:[{budget:{$lt:"$10000"}},{production_year:{$lt:2000}}]}).pretty()
+>
+> db.movies.find({$or:[{budget:{$ne:"$10000"}},{production_year:{$ne:2000}}]}).pretty()
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c963"),
+        "id" : 1,
+        "movie_name" : "Medicine for Melancholy",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1995,
+        "budget" : "$11903.24"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c964"),
+        "id" : 2,
+        "movie_name" : "Kitty",
+        "movie_genre" : "Drama",
+        "production_year" : 2017,
+        "budget" : "$9159.82"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c965"),
+        "id" : 3,
+        "movie_name" : "Arrangement, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1992,
+        "budget" : "$19946.20"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c966"),
+        "id" : 4,
+        "movie_name" : "Gun the Man Down",
+        "movie_genre" : "Western",
+        "production_year" : 2007,
+        "budget" : "$18572.57"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c967"),
+        "id" : 5,
+        "movie_name" : "Answer Man, The (a.k.a. Arlen Faber)",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1997,
+        "budget" : "$19567.19"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c968"),
+        "id" : 6,
+        "movie_name" : "Knocked Up",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1998,
+        "budget" : "$15532.78"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c969"),
+        "id" : 7,
+        "movie_name" : "Yards, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1994,
+        "budget" : "$9433.45"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96a"),
+        "id" : 8,
+        "movie_name" : "Emergency Escape, The (Wyjscie awaryjne)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2008,
+        "budget" : "$11717.56"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96b"),
+        "id" : 9,
+        "movie_name" : "World's Greatest Dad",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2018,
+        "budget" : "$18629.27"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96c"),
+        "id" : 10,
+        "movie_name" : "Abbott and Costello Meet Dr. Jekyll and Mr. Hyde",
+        "movie_genre" : "Comedy|Horror|Sci-Fi",
+        "production_year" : 1993,
+        "budget" : "$9866.76"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96d"),
+        "id" : 11,
+        "movie_name" : "Just Imagine",
+        "movie_genre" : "Musical|Sci-Fi",
+        "production_year" : 2020,
+        "budget" : "$9219.89"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96e"),
+        "id" : 12,
+        "movie_name" : "Departed, The",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 1994,
+        "budget" : "$12429.62"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c96f"),
+        "id" : 13,
+        "movie_name" : "Down and Out in Beverly Hills",
+        "movie_genre" : "Comedy",
+        "production_year" : 1992,
+        "budget" : "$18048.58"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c970"),
+        "id" : 14,
+        "movie_name" : "Every Which Way But Loose",
+        "movie_genre" : "Comedy",
+        "production_year" : 1998,
+        "budget" : "$16415.04"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c971"),
+        "id" : 15,
+        "movie_name" : "Gazebo, The",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2014,
+        "budget" : "$18873.45"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c972"),
+        "id" : 16,
+        "movie_name" : "ATF ",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2003,
+        "budget" : "$17702.02"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c973"),
+        "id" : 17,
+        "movie_name" : "Jesse Stone: Night Passage",
+        "movie_genre" : "Crime|Drama|Mystery",
+        "production_year" : 2007,
+        "budget" : "$11397.43"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c974"),
+        "id" : 18,
+        "movie_name" : "Married Couple, A",
+        "movie_genre" : "Documentary",
+        "production_year" : 1990,
+        "budget" : "$19147.01"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c975"),
+        "id" : 19,
+        "movie_name" : "Stay as You Are",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1993,
+        "budget" : "$13764.02"
+}
+{
+        "_id" : ObjectId("6146140ebdd2b15f6899c976"),
+        "id" : 20,
+        "movie_name" : "Bells, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1997,
+        "budget" : "$9407.02"
+}
+Type "it" for more
+>> db.movies.aggregate([{$project:{"production_year":{$range:[2000,2010]}}}])
+{ "_id" : ObjectId("6146140ebdd2b15f6899c963"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c964"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c965"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c966"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c967"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c968"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c969"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c96a"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c96b"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c96c"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c96d"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c96e"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c96f"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c970"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c971"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c972"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c973"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c974"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c975"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c976"), "production_year" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 ] }
+Type "it" for more
+>
+ db.movies.find().sort({production_year:-1,movie_name:1})
+{ "_id" : ObjectId("6146140ebdd2b15f6899c9ff"), "id" : 157, "movie_name" : "200 M.P.H.", "movie_genre" : "Action|Adventure|Drama", "production_year" : 2020, "budget" : "$16235.10" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899caa8"), "id" : 326, "movie_name" : "Arsène Lupin", "movie_genre" : "Action|Adventure|Crime|Mystery|Romance", "production_year" : 2020, "budget" : "$12473.87" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899cada"), "id" : 376, "movie_name" : "Aspen", "movie_genre" : "Documentary", "production_year" : 2020, "budget" : "$14971.24" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899cb18"), "id" : 438, "movie_name" : "At Midnight I'll Take Your Soul (À Meia-Noite Levarei Sua Alma)", "movie_genre" : "Horror", "production_year" : 2020, "budget" : "$13914.78" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899ca49"), "id" : 231, "movie_name" : "Bottom of the Sea, The (El fondo del mar)", "movie_genre" : "Drama|Thriller", "production_year" : 2020, "budget" : "$12879.49" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899ca57"), "id" : 245, "movie_name" : "Death Race 3: Inferno", "movie_genre" : "Action|Sci-Fi|Thriller", "production_year" : 2020, "budget" : "$13726.87" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899caa5"), "id" : 323, "movie_name" : "Grave of the Fireflies (Hotaru no haka)", "movie_genre" : "Animation|Drama|War", "production_year" : 2020, "budget" : "$10521.16" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899cafe"), "id" : 412, "movie_name" : "In the Mix", "movie_genre" : "Comedy|Crime|Romance", "production_year" : 2020, "budget" : "$12428.56" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899cac2"), "id" : 352, "movie_name" : "Invitation to Happiness", "movie_genre" : "Drama|Romance", "production_year" : 2020, "budget" : "$18193.07" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c96d"), "id" : 11, "movie_name" : "Just Imagine", "movie_genre" : "Musical|Sci-Fi", "production_year" : 2020, "budget" : "$9219.89" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c9c7"), "id" : 101, "movie_name" : "Mona and the Time of Burning Love (Mona ja palavan rakkauden aika))", "movie_genre" : "Drama", "production_year" : 2020, "budget" : "$14599.45" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899cb3a"), "id" : 472, "movie_name" : "Nine Lives", "movie_genre" : "Drama", "production_year" : 2020, "budget" : "$13201.72" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899ca13"), "id" : 177, "movie_name" : "OT: Our Town", "movie_genre" : "Documentary", "production_year" : 2020, "budget" : "$18288.05" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c99f"), "id" : 61, "movie_name" : "Over the Brooklyn Bridge", "movie_genre" : "Comedy", "production_year" : 2020, "budget" : "$14040.00" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c9d4"), "id" : 114, "movie_name" : "Pelle Svanslös i Amerikatt", "movie_genre" : "Animation|Children", "production_year" : 2020, "budget" : "$11273.63" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899ca9c"), "id" : 314, "movie_name" : "Pigs", "movie_genre" : "Comedy", "production_year" : 2020, "budget" : "$9287.43" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899caaa"), "id" : 328, "movie_name" : "Quick Change", "movie_genre" : "Comedy|Crime", "production_year" : 2020, "budget" : "$12917.39" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c9a2"), "id" : 64, "movie_name" : "Rumble in the Bronx (Hont faan kui)", "movie_genre" : "Action|Adventure|Comedy|Crime", "production_year" : 2020, "budget" : "$13374.61" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c9b3"), "id" : 81, "movie_name" : "Set It Off", "movie_genre" : "Action|Crime", "production_year" : 2020, "budget" : "$17025.87" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c97f"), "id" : 29, "movie_name" : "Sissi: The Young Empress (Sissi - Die Junge Kaiserin)", "movie_genre" : "Drama", "production_year" : 2020, "budget" : "$15861.70" }
+Type "it" for more
+>
+>  db.movies.find().sort({production_year:-1,movie_name:1}).skip(10).limit(5)
+{ "_id" : ObjectId("6146140ebdd2b15f6899c9c7"), "id" : 101, "movie_name" : "Mona and the Time of Burning Love (Mona ja palavan rakkauden aika))", "movie_genre" : "Drama", "production_year" : 2020, "budget" : "$14599.45" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899cb3a"), "id" : 472, "movie_name" : "Nine Lives", "movie_genre" : "Drama", "production_year" : 2020, "budget" : "$13201.72" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899ca13"), "id" : 177, "movie_name" : "OT: Our Town", "movie_genre" : "Documentary", "production_year" : 2020, "budget" : "$18288.05" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c99f"), "id" : 61, "movie_name" : "Over the Brooklyn Bridge", "movie_genre" : "Comedy", "production_year" : 2020, "budget" : "$14040.00" }
+{ "_id" : ObjectId("6146140ebdd2b15f6899c9d4"), "id" : 114, "movie_name" : "Pelle Svanslös i Amerikatt", "movie_genre" : "Animation|Children", "production_year" : 2020, "budget" : "$11273.63" }
+>
+> db.movies.find().sort({production_year:-1,movie_name:1}).limit(10).map(doc=>db.movies.update({_id:doc._id},{$unset:{movie_genre:1}}))
+[
+        {
+                "nMatched" : 1,
+                "nUpserted" : 0,
+                "nModified" : 1
+        },
+        {
+                "nMatched" : 1,
+                "nUpserted" : 0,
+                "nModified" : 1
+        },
+        {
+                "nMatched" : 1,
+                "nUpserted" : 0,
+                "nModified" : 1
+        },
+        {
+                "nMatched" : 1,
+                "nUpserted" : 0,
+                "nModified" : 1
+        },
+        {
+                "nMatched" : 1,
+                "nUpserted" : 0,
+                "nModified" : 1
+        },
+        {
+                "nMatched" : 1,
+                "nUpserted" : 0,
+                "nModified" : 1
+        },
+        {
+                "nMatched" : 1,
+                "nUpserted" : 0,
+                "nModified" : 1
+        },
+        {
+                "nMatched" : 1,
+                "nUpserted" : 0,
+                "nModified" : 1
+        },
+        {
+                "nMatched" : 1,
+                "nUpserted" : 0,
+                "nModified" : 1
+        },
+        {
+                "nMatched" : 1,
+                "nUpserted" : 0,
+                "nModified" : 1
+        }
+]
+> db.users.find().sort({production_year:-1,movie_name:1}).limit(10)
+{ "_id" : ObjectId("614a224fc50a2badaaf8acbb"), "id" : 157, "movie_name" : "200 M.P.H.", "production_year" : 2020, "budget" : "$16235.10" }
+{ "_id" : ObjectId("614a224fc50a2badaaf8ad64"), "id" : 326, "movie_name" : "Arsène Lupin", "production_year" : 2020, "budget" : "$12473.87" }
+{ "_id" : ObjectId("614a224fc50a2badaaf8ad96"), "id" : 376, "movie_name" : "Aspen", "production_year" : 2020, "budget" : "$14971.24" }
+{ "_id" : ObjectId("614a224fc50a2badaaf8add4"), "id" : 438, "movie_name" : "At Midnight I'll Take Your Soul (À Meia-Noite Levarei Sua Alma)", "production_year" : 2020, "budget" : "$13914.78" }
+{ "_id" : ObjectId("614a224fc50a2badaaf8ad05"), "id" : 231, "movie_name" : "Bottom of the Sea, The (El fondo del mar)", "production_year" : 2020, "budget" : "$12879.49" }
+{ "_id" : ObjectId("614a224fc50a2badaaf8ad13"), "id" : 245, "movie_name" : "Death Race 3: Inferno", "production_year" : 2020, "budget" : "$13726.87" }
+{ "_id" : ObjectId("614a224fc50a2badaaf8ad61"), "id" : 323, "movie_name" : "Grave of the Fireflies (Hotaru no haka)", "production_year" : 2020, "budget" : "$10521.16" }
+{ "_id" : ObjectId("614a224fc50a2badaaf8adba"), "id" : 412, "movie_name" : "In the Mix", "production_year" : 2020, "budget" : "$12428.56" }
+{ "_id" : ObjectId("614a224fc50a2badaaf8ad7e"), "id" : 352, "movie_name" : "Invitation to Happiness", "production_year" : 2020, "budget" : "$18193.07" }
+{ "_id" : ObjectId("614a224fc50a2badaaf8ac29"), "id" : 11, "movie_name" : "Just Imagine", "production_year" : 2020, "budget" : "$9219.89" }

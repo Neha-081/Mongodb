@@ -1290,7 +1290,7 @@ Type "it" for more
                 "nModified" : 1
         }
 ]
-> db.users.find().sort({production_year:-1,movie_name:1}).limit(10)
+> db.movies.find().sort({production_year:-1,movie_name:1}).limit(10)
 { "_id" : ObjectId("614a224fc50a2badaaf8acbb"), "id" : 157, "movie_name" : "200 M.P.H.", "production_year" : 2020, "budget" : "$16235.10" }
 { "_id" : ObjectId("614a224fc50a2badaaf8ad64"), "id" : 326, "movie_name" : "Arsène Lupin", "production_year" : 2020, "budget" : "$12473.87" }
 { "_id" : ObjectId("614a224fc50a2badaaf8ad96"), "id" : 376, "movie_name" : "Aspen", "production_year" : 2020, "budget" : "$14971.24" }
